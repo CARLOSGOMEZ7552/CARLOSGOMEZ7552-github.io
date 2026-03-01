@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: blob:;
+        connect-src 'self';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+
+    <!-- SEO & Meta -->
+    <meta name="description"
+        content="CustomPointMX — Creamos páginas web profesionales para empresas pequeñas, medianas y grandes. Diseño moderno, rendimiento óptimo y resultados medibles.">
+    <meta name="keywords"
+        content="diseño web, páginas web empresariales, desarrollo web, sitios web profesionales, CustomPointMX">
+    <title>CustomPointMX — Páginas Web Profesionales para tu Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%233b82f6'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='900' fill='white'>CP</text></svg>">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar__logo">
+                <div class="navbar__logo-icon">CP</div>
+                CustomPoint<span class="logo-accent">MX</span>
+            </a>
+            <div class="navbar__nav" id="navMenu">
+                <a href="#servicios" class="navbar__link">Servicios</a>
+                <a href="#proyectos" class="navbar__link">Proyectos</a>
+                <a href="#porque" class="navbar__link">¿Por qué?</a>
+                <a href="#proceso" class="navbar__link">Proceso</a>
+                <a href="#precios" class="navbar__link">Planes</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                    <span class="theme-toggle__slider"></span>
+                </button>
+                <a href="#contacto" class="navbar__cta">Contactar →</a>
+            </div>
+            <div class="navbar__right-mobile">
+                <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Cambiar tema">
+                    <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                    <span class="theme-toggle__slider"></span>
+                </button>
+                <button class="navbar__mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="inicio">
+        <img src="hero-bg.png" alt="" class="hero__bg-image" loading="eager">
+        <div class="hero__overlay"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    Nuevo: Lanzamientos web en 14 días
+                </div>
+                <h1 class="hero__title">
+                    <span class="line">Tu empresa</span>
+                    <span class="line">merece una web</span>
+                    <span class="line gradient-text">excepcional.</span>
+                </h1>
+                <p class="hero__description">
+                    Diseñamos y desarrollamos páginas web que impulsan tu negocio.
+                    Desde startups hasta corporaciones — creamos experiencias digitales
+                    que convierten visitantes en clientes.
+                </p>
+                <div class="hero__actions">
+                    <a href="#precios" class="btn-primary" id="hero-cta-primary">
+                        Ver planes
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#proyectos" class="btn-secondary" id="hero-cta-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor" />
+                        </svg>
+                        Ver proyectos
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <img src="web-mockup.png" alt="Mockup de diseño web profesional" class="hero__mockup">
+                <div class="hero__float-card hero__float-card--1">
+                    <div class="float-card__icon">⚡</div>
+                    <div class="float-card__title">Rendimiento</div>
+                    <div class="float-card__value">99/100 Score</div>
+                </div>
+                <div class="hero__float-card hero__float-card--2">
+                    <div class="float-card__icon">📈</div>
+                    <div class="float-card__title">Conversiones</div>
+                    <div class="float-card__value">+340% Growth</div>
+                </div>
+                <div class="hero__float-card hero__float-card--3">
+                    <div class="float-card__icon">🔒</div>
+                    <div class="float-card__title">Seguridad</div>
+                    <div class="float-card__value">SSL + WAF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services__header reveal">
+                <div class="section-label">Nuestros servicios</div>
+                <h2 class="section-title">Soluciones web para <span class="gradient-text">cada negocio</span></h2>
+                <p class="section-subtitle">
+                    No importa el tamaño de tu empresa, tenemos la solución perfecta para llevar
+                    tu presencia digital al siguiente nivel.
+                </p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card__icon service-card__icon--blue">🎨</div>
+                    <h3 class="service-card__title">Diseño UI/UX</h3>
+                    <p class="service-card__description">
+                        Interfaces modernas y experiencias de usuario intuitivas que cautivan
+                        a tus visitantes y los convierten en clientes leales.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Diseño responsive adaptable</span>
+                        <span class="service-card__feature">Prototipado interactivo</span>
+                        <span class="service-card__feature">Identidad visual coherente</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card__icon service-card__icon--purple">⚙️</div>
+                    <h3 class="service-card__title">Desarrollo Web</h3>
+                    <p class="service-card__description">
+                        Código limpio, rápido y seguro. Usamos las tecnologías más avanzadas para
+                        crear sitios web de alto rendimiento.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">React, Next.js, Vue</span>
+                        <span class="service-card__feature">Optimización SEO técnica</span>
+                        <span class="service-card__feature">Rendimiento optimizado</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-card__icon service-card__icon--cyan">🛒</div>
+                    <h3 class="service-card__title">E-Commerce</h3>
+                    <p class="service-card__description">
+                        Tiendas online profesionales que venden. Integración de pagos,
+                        inventario y logística en una sola plataforma.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Pasarelas de pago</span>
+                        <span class="service-card__feature">Gestión de inventario</span>
+                        <span class="service-card__feature">Carrito optimizado</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card__icon service-card__icon--emerald">📊</div>
+                    <h3 class="service-card__title">Analítica & SEO</h3>
+                    <p class="service-card__description">
+                        Posiciona tu negocio en los primeros resultados de Google.
+                        Métricas claras y estrategias basadas en datos reales.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Google Analytics integrado</span>
+                        <span class="service-card__feature">SEO on-page y off-page</span>
+                        <span class="service-card__feature">Reportes mensuales</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card__icon service-card__icon--indigo">🔧</div>
+                    <h3 class="service-card__title">Mantenimiento</h3>
+                    <p class="service-card__description">
+                        Tu web siempre actualizada y funcionando al 100%. Soporte técnico
+                        continuo y actualizaciones de seguridad.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Monitoreo 24/7</span>
+                        <span class="service-card__feature">Backups automáticos</span>
+                        <span class="service-card__feature">Actualizaciones de seguridad</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-card__icon service-card__icon--pink">📱</div>
+                    <h3 class="service-card__title">Apps Web</h3>
+                    <p class="service-card__description">
+                        Aplicaciones web progresivas (PWA) que funcionan como apps nativas
+                        sin necesidad de descargar nada.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Funciona offline</span>
+                        <span class="service-card__feature">Notificaciones push</span>
+                        <span class="service-card__feature">Instalable en dispositivos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <div class="projects__header reveal">
+                <div class="section-label">Portafolio</div>
+                <h2 class="section-title">Proyectos <span class="gradient-text">realizados</span></h2>
+                <p class="section-subtitle">
+                    Cada proyecto es una historia de éxito. Conoce algunos de los sitios web
+                    que hemos creado para nuestros clientes.
+                </p>
+            </div>
+            <div class="projects__grid">
+
+                <!-- Proyecto 1 -->
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-card__image project-card__image--blue">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <!-- Background gradient -->
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0f2040;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="url(#grad1)"/>
+                            <!-- Store header bar -->
+                            <rect x="20" y="15" width="360" height="30" rx="4" fill="#1a4a7a" opacity="0.8"/>
+                            <circle cx="36" cy="30" r="6" fill="#3b82f6"/>
+                            <rect x="50" y="25" width="60" height="10" rx="3" fill="#60a5fa" opacity="0.7"/>
+                            <rect x="260" y="25" width="50" height="10" rx="3" fill="#60a5fa" opacity="0.4"/>
+                            <rect x="318" y="25" width="30" height="10" rx="3" fill="#3b82f6" opacity="0.9"/>
+                            <!-- Product grid -->
+                            <rect x="20" y="55" width="110" height="130" rx="6" fill="#1a4a7a" opacity="0.7"/>
+                            <rect x="30" y="65" width="90" height="75" rx="4" fill="#2563eb" opacity="0.5"/>
+                            <!-- Dress icon P1 -->
+                            <path d="M65 75 Q75 70 85 75 L90 105 L60 105 Z" fill="#93c5fd" opacity="0.8"/>
+                            <rect x="30" y="148" width="60" height="8" rx="2" fill="#93c5fd" opacity="0.6"/>
+                            <rect x="30" y="162" width="40" height="7" rx="2" fill="#3b82f6"/>
+                            <!-- Product 2 -->
+                            <rect x="145" y="55" width="110" height="130" rx="6" fill="#1a4a7a" opacity="0.7"/>
+                            <rect x="155" y="65" width="90" height="75" rx="4" fill="#7c3aed" opacity="0.4"/>
+                            <!-- Shirt icon -->
+                            <path d="M180 75 L170 90 L180 93 L180 115 L200 115 L200 93 L210 90 L200 75 Q195 80 180 75Z" fill="#c4b5fd" opacity="0.8"/>
+                            <rect x="155" y="148" width="60" height="8" rx="2" fill="#93c5fd" opacity="0.6"/>
+                            <rect x="155" y="162" width="40" height="7" rx="2" fill="#3b82f6"/>
+                            <!-- Product 3 -->
+                            <rect x="270" y="55" width="110" height="130" rx="6" fill="#1a4a7a" opacity="0.7"/>
+                            <rect x="280" y="65" width="90" height="75" rx="4" fill="#0891b2" opacity="0.4"/>
+                            <!-- Bag icon -->
+                            <rect x="300" y="85" width="40" height="35" rx="4" fill="#7dd3fc" opacity="0.8"/>
+                            <path d="M308 85 Q308 76 320 76 Q332 76 332 85" fill="none" stroke="#7dd3fc" stroke-width="3" opacity="0.8"/>
+                            <rect x="280" y="148" width="60" height="8" rx="2" fill="#93c5fd" opacity="0.6"/>
+                            <rect x="280" y="162" width="40" height="7" rx="2" fill="#3b82f6"/>
+                            <!-- Cart badge top right -->
+                            <circle cx="370" cy="22" r="9" fill="#3b82f6"/>
+                            <text x="370" y="26" text-anchor="middle" font-size="10" fill="white" font-weight="bold">3</text>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--blue">E-Commerce</span>
+                        <h3 class="project-card__title">Tienda Moda & Style</h3>
+                        <p class="project-card__desc">Tienda online de ropa con catálogo de 500+ productos, carrito
+                            dinámico y pasarela de pagos integrada.</p>
+                        <div class="project-card__tech">
+                            <span>Next.js</span><span>Stripe</span><span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-card__image project-card__image--purple">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2d1b69;stop-opacity:1"/><stop offset="100%" style="stop-color:#1a0f3d;stop-opacity:1"/></linearGradient></defs>
+                            <rect width="400" height="220" fill="url(#grad2)"/>
+                            <rect x="20" y="15" width="360" height="85" rx="6" fill="#3b1f8c" opacity="0.5"/>
+                            <rect x="40" y="45" width="28" height="55" fill="#7c3aed" opacity="0.6"/>
+                            <rect x="78" y="32" width="42" height="68" fill="#6d28d9" opacity="0.7"/>
+                            <rect x="130" y="50" width="22" height="50" fill="#7c3aed" opacity="0.5"/>
+                            <polygon points="40,45 54,45 54,40 47,33" fill="#a78bfa" opacity="0.7"/>
+                            <polygon points="78,32 120,32 120,27 99,18" fill="#c4b5fd" opacity="0.6"/>
+                            <line x1="240" y1="20" x2="240" y2="95" stroke="#a78bfa" stroke-width="3" opacity="0.8"/>
+                            <line x1="240" y1="25" x2="310" y2="25" stroke="#a78bfa" stroke-width="3" opacity="0.8"/>
+                            <line x1="310" y1="25" x2="310" y2="62" stroke="#a78bfa" stroke-width="2" opacity="0.6" stroke-dasharray="4,3"/>
+                            <rect x="298" y="62" width="24" height="18" rx="2" fill="#c4b5fd" opacity="0.6"/>
+                            <ellipse cx="340" cy="58" rx="24" ry="15" fill="#fbbf24" opacity="0.75"/>
+                            <rect x="316" y="62" width="48" height="7" rx="3" fill="#f59e0b" opacity="0.75"/>
+                            <rect x="20" y="108" width="240" height="13" rx="3" fill="#c4b5fd" opacity="0.7"/>
+                            <rect x="20" y="127" width="160" height="9" rx="3" fill="#a78bfa" opacity="0.45"/>
+                            <rect x="20" y="148" width="108" height="58" rx="5" fill="#3b1f8c" opacity="0.7"/>
+                            <rect x="30" y="156" width="88" height="34" rx="3" fill="#5b21b6" opacity="0.55"/>
+                            <rect x="30" y="195" width="52" height="6" rx="2" fill="#a78bfa" opacity="0.45"/>
+                            <rect x="146" y="148" width="108" height="58" rx="5" fill="#3b1f8c" opacity="0.7"/>
+                            <rect x="156" y="156" width="88" height="34" rx="3" fill="#7c3aed" opacity="0.45"/>
+                            <rect x="156" y="195" width="52" height="6" rx="2" fill="#a78bfa" opacity="0.45"/>
+                            <rect x="272" y="148" width="108" height="58" rx="5" fill="#3b1f8c" opacity="0.7"/>
+                            <rect x="282" y="156" width="88" height="34" rx="3" fill="#4c1d95" opacity="0.55"/>
+                            <rect x="282" y="195" width="52" height="6" rx="2" fill="#a78bfa" opacity="0.45"/>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--purple">Corporativo</span>
+                        <h3 class="project-card__title">Constructora Velázquez</h3>
+                        <p class="project-card__desc">Sitio corporativo con portafolio de obras, galería interactiva y
+                            formulario de cotización en línea.</p>
+                        <div class="project-card__tech">
+                            <span>React</span><span>Node.js</span><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-card__image project-card__image--cyan">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0c3344;stop-opacity:1"/><stop offset="100%" style="stop-color:#061e2a;stop-opacity:1"/></linearGradient></defs>
+                            <rect width="400" height="220" fill="url(#grad3)"/>
+                            <rect x="20" y="15" width="360" height="30" rx="4" fill="#064e63" opacity="0.8"/>
+                            <circle cx="36" cy="30" r="6" fill="#06b6d4"/>
+                            <rect x="50" y="25" width="80" height="10" rx="3" fill="#22d3ee" opacity="0.6"/>
+                            <rect x="310" y="23" width="60" height="14" rx="4" fill="#06b6d4" opacity="0.9"/>
+                            <rect x="20" y="55" width="175" height="155" rx="6" fill="#064e63" opacity="0.6"/>
+                            <rect x="30" y="65" width="155" height="25" rx="4" fill="#0891b2" opacity="0.5"/>
+                            <text x="107" y="82" text-anchor="middle" font-size="11" fill="#67e8f9" font-weight="bold" font-family="sans-serif">Agenda de Citas</text>
+                            <rect x="30" y="97" width="155" height="18" rx="3" fill="#0e7490" opacity="0.4"/>
+                            <rect x="30" y="120" width="68" height="30" rx="3" fill="#0891b2" opacity="0.35"/>
+                            <rect x="107" y="120" width="68" height="30" rx="3" fill="#0891b2" opacity="0.35"/>
+                            <rect x="30" y="157" width="68" height="30" rx="3" fill="#0891b2" opacity="0.35"/>
+                            <rect x="107" y="157" width="68" height="30" rx="3" fill="#06b6d4" opacity="0.5"/>
+                            <rect x="30" y="195" width="100" height="8" rx="2" fill="#22d3ee" opacity="0.4"/>
+                            <rect x="210" y="55" width="170" height="75" rx="6" fill="#064e63" opacity="0.6"/>
+                            <circle cx="240" cy="80" r="18" fill="#0891b2" opacity="0.5"/>
+                            <text x="240" y="85" text-anchor="middle" font-size="18" fill="#67e8f9">+</text>
+                            <rect x="264" y="68" width="100" height="9" rx="2" fill="#22d3ee" opacity="0.55"/>
+                            <rect x="264" y="83" width="75" height="7" rx="2" fill="#22d3ee" opacity="0.35"/>
+                            <rect x="264" y="96" width="85" height="7" rx="2" fill="#22d3ee" opacity="0.35"/>
+                            <rect x="210" y="140" width="170" height="70" rx="6" fill="#064e63" opacity="0.6"/>
+                            <rect x="220" y="150" width="150" height="10" rx="3" fill="#0891b2" opacity="0.4"/>
+                            <rect x="220" y="165" width="115" height="8" rx="3" fill="#0891b2" opacity="0.3"/>
+                            <rect x="220" y="178" width="130" height="8" rx="3" fill="#0891b2" opacity="0.3"/>
+                            <rect x="220" y="193" width="50" height="10" rx="3" fill="#06b6d4" opacity="0.7"/>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--cyan">App Web</span>
+                        <h3 class="project-card__title">Portal Clínica MedPlus</h3>
+                        <p class="project-card__desc">App web para agendar citas médicas, historial de pacientes y panel
+                            de administración para médicos.</p>
+                        <div class="project-card__tech">
+                            <span>Vue.js</span><span>Laravel</span><span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-card__image project-card__image--emerald">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <defs><linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0a2e1a;stop-opacity:1"/><stop offset="100%" style="stop-color:#052010;stop-opacity:1"/></linearGradient></defs>
+                            <rect width="400" height="220" fill="url(#grad4)"/>
+                            <rect x="0" y="0" width="400" height="75" fill="#065f34" opacity="0.5"/>
+                            <rect x="20" y="15" width="360" height="45" rx="5" fill="#047857" opacity="0.4"/>
+                            <text x="200" y="35" text-anchor="middle" font-size="16" fill="#6ee7b7" font-weight="bold" font-family="serif" letter-spacing="2">LA HACIENDA</text>
+                            <text x="200" y="52" text-anchor="middle" font-size="9" fill="#a7f3d0" font-family="sans-serif" letter-spacing="4">COCINA TRADICIONAL</text>
+                            <rect x="20" y="78" width="360" height="32" rx="4" fill="#064e2f" opacity="0.6"/>
+                            <text x="55" y="99" text-anchor="middle" font-size="10" fill="#6ee7b7">Menú</text>
+                            <text x="130" y="99" text-anchor="middle" font-size="10" fill="#6ee7b7">Reservar</text>
+                            <text x="200" y="99" text-anchor="middle" font-size="10" fill="#6ee7b7">Galería</text>
+                            <text x="268" y="99" text-anchor="middle" font-size="10" fill="#6ee7b7">Contacto</text>
+                            <rect x="310" y="83" width="60" height="20" rx="10" fill="#10b981" opacity="0.8"/>
+                            <text x="340" y="97" text-anchor="middle" font-size="9" fill="white">Reservar</text>
+                            <rect x="20" y="120" width="175" height="90" rx="6" fill="#064e2f" opacity="0.5"/>
+                            <circle cx="107" cy="145" r="20" fill="#065f46" opacity="0.8"/>
+                            <text x="107" y="152" text-anchor="middle" font-size="22">🍽</text>
+                            <rect x="30" y="170" width="155" height="10" rx="2" fill="#6ee7b7" opacity="0.6"/>
+                            <rect x="50" y="186" width="110" height="8" rx="2" fill="#34d399" opacity="0.4"/>
+                            <rect x="30" y="200" width="60" height="8" rx="2" fill="#34d399" opacity="0.35"/>
+                            <rect x="210" y="120" width="170" height="90" rx="6" fill="#064e2f" opacity="0.5"/>
+                            <rect x="220" y="130" width="75" height="55" rx="4" fill="#065f46" opacity="0.5"/>
+                            <rect x="303" y="130" width="67" height="55" rx="4" fill="#065f46" opacity="0.5"/>
+                            <text x="258" y="162" text-anchor="middle" font-size="20">📍</text>
+                            <rect x="220" y="192" width="150" height="8" rx="2" fill="#6ee7b7" opacity="0.5"/>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--emerald">Landing Page</span>
+                        <h3 class="project-card__title">Restaurante La Hacienda</h3>
+                        <p class="project-card__desc">Landing page con menú digital, reservaciones en línea e
+                            integración con Google Maps y reseñas.</p>
+                        <div class="project-card__tech">
+                            <span>HTML5</span><span>JavaScript</span><span>SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-card__image project-card__image--pink">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <defs><linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b0a2a;stop-opacity:1"/><stop offset="100%" style="stop-color:#200515;stop-opacity:1"/></linearGradient></defs>
+                            <rect width="400" height="220" fill="url(#grad5)"/>
+                            <rect x="20" y="15" width="360" height="30" rx="4" fill="#6b1244" opacity="0.6"/>
+                            <circle cx="36" cy="30" r="6" fill="#ec4899"/>
+                            <text x="56" y="34" font-size="11" fill="#f9a8d4" font-weight="bold" font-family="serif">BellezaPro</text>
+                            <rect x="290" y="22" width="20" height="16" rx="3" fill="none" stroke="#f9a8d4" stroke-width="1.5"/>
+                            <text x="300" y="34" text-anchor="middle" font-size="12" fill="#f9a8d4">🛒</text>
+                            <rect x="320" y="22" width="55" height="16" rx="8" fill="#be185d" opacity="0.8"/>
+                            <text x="348" y="34" text-anchor="middle" font-size="9" fill="white">Mi cuenta</text>
+                            <rect x="20" y="55" width="110" height="140" rx="6" fill="#6b1244" opacity="0.45"/>
+                            <rect x="30" y="65" width="90" height="70" rx="4" fill="#9d174d" opacity="0.4"/>
+                            <ellipse cx="75" cy="95" rx="18" ry="28" fill="#f9a8d4" opacity="0.6"/>
+                            <ellipse cx="75" cy="70" rx="10" ry="8" fill="#fce7f3" opacity="0.5"/>
+                            <rect x="30" y="142" width="90" height="8" rx="2" fill="#f9a8d4" opacity="0.55"/>
+                            <rect x="30" y="156" width="55" height="7" rx="2" fill="#ec4899" opacity="0.7"/>
+                            <rect x="30" y="170" width="70" height="16" rx="8" fill="#be185d" opacity="0.7"/>
+                            <text x="65" y="182" text-anchor="middle" font-size="9" fill="white">Comprar</text>
+                            <rect x="145" y="55" width="110" height="140" rx="6" fill="#6b1244" opacity="0.45"/>
+                            <rect x="155" y="65" width="90" height="70" rx="4" fill="#831843" opacity="0.4"/>
+                            <rect x="170" y="80" width="60" height="45" rx="20" fill="#fbcfe8" opacity="0.55"/>
+                            <rect x="155" y="142" width="90" height="8" rx="2" fill="#f9a8d4" opacity="0.55"/>
+                            <rect x="155" y="156" width="55" height="7" rx="2" fill="#ec4899" opacity="0.7"/>
+                            <rect x="155" y="170" width="70" height="16" rx="8" fill="#be185d" opacity="0.7"/>
+                            <text x="190" y="182" text-anchor="middle" font-size="9" fill="white">Comprar</text>
+                            <rect x="270" y="55" width="110" height="140" rx="6" fill="#6b1244" opacity="0.45"/>
+                            <rect x="280" y="65" width="90" height="70" rx="4" fill="#9d174d" opacity="0.35"/>
+                            <circle cx="325" cy="98" r="25" fill="#fda4af" opacity="0.5"/>
+                            <circle cx="325" cy="98" r="15" fill="#fb7185" opacity="0.4"/>
+                            <rect x="280" y="142" width="90" height="8" rx="2" fill="#f9a8d4" opacity="0.55"/>
+                            <rect x="280" y="156" width="55" height="7" rx="2" fill="#ec4899" opacity="0.7"/>
+                            <rect x="280" y="170" width="70" height="16" rx="8" fill="#be185d" opacity="0.7"/>
+                            <text x="315" y="182" text-anchor="middle" font-size="9" fill="white">Comprar</text>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--pink">E-Commerce</span>
+                        <h3 class="project-card__title">BellezaPro Cosméticos</h3>
+                        <p class="project-card__desc">Tienda de cosméticos con sistema de reseñas, wishlist, comparador
+                            de productos y envíos nacionales.</p>
+                        <div class="project-card__tech">
+                            <span>Shopify</span><span>Liquid</span><span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-card__image project-card__image--indigo">
+                        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+                            <defs><linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1"/><stop offset="100%" style="stop-color:#0f0d2e;stop-opacity:1"/></linearGradient></defs>
+                            <rect width="400" height="220" fill="url(#grad6)"/>
+                            <rect x="20" y="15" width="360" height="55" rx="5" fill="#312e81" opacity="0.5"/>
+                            <rect x="30" y="23" width="12" height="40" rx="1" fill="#818cf8" opacity="0.7"/>
+                            <rect x="46" y="28" width="8" height="35" rx="1" fill="#6366f1" opacity="0.7"/>
+                            <rect x="58" y="32" width="10" height="31" rx="1" fill="#818cf8" opacity="0.6"/>
+                            <text x="90" y="37" font-size="13" fill="#c7d2fe" font-weight="bold" font-family="serif">FUENTES</text>
+                            <text x="90" y="55" font-size="9" fill="#a5b4fc" font-family="sans-serif" letter-spacing="1">DESPACHO JURÍDICO</text>
+                            <rect x="270" y="25" width="100" height="18" rx="9" fill="#4f46e5" opacity="0.8"/>
+                            <text x="320" y="38" text-anchor="middle" font-size="9" fill="white">Consulta gratuita</text>
+                            <rect x="20" y="80" width="175" height="130" rx="6" fill="#312e81" opacity="0.45"/>
+                            <text x="107" y="100" text-anchor="middle" font-size="10" fill="#c7d2fe" font-weight="bold" font-family="sans-serif">Áreas de Práctica</text>
+                            <rect x="30" y="107" width="155" height="1" fill="#6366f1" opacity="0.4"/>
+                            <rect x="30" y="114" width="155" height="12" rx="3" fill="#3730a3" opacity="0.5"/>
+                            <text x="35" y="124" font-size="9" fill="#a5b4fc">⚖ Derecho Civil</text>
+                            <rect x="30" y="130" width="155" height="12" rx="3" fill="#3730a3" opacity="0.5"/>
+                            <text x="35" y="140" font-size="9" fill="#a5b4fc">📋 Derecho Mercantil</text>
+                            <rect x="30" y="146" width="155" height="12" rx="3" fill="#3730a3" opacity="0.5"/>
+                            <text x="35" y="156" font-size="9" fill="#a5b4fc">🏛 Derecho Laboral</text>
+                            <rect x="30" y="162" width="155" height="12" rx="3" fill="#4f46e5" opacity="0.4"/>
+                            <text x="35" y="172" font-size="9" fill="#a5b4fc">🔒 Derecho Penal</text>
+                            <rect x="210" y="80" width="170" height="60" rx="6" fill="#312e81" opacity="0.45"/>
+                            <text x="295" y="100" text-anchor="middle" font-size="10" fill="#c7d2fe" font-weight="bold">Artículo Reciente</text>
+                            <rect x="220" y="106" width="150" height="8" rx="2" fill="#6366f1" opacity="0.4"/>
+                            <rect x="220" y="118" width="120" height="7" rx="2" fill="#6366f1" opacity="0.3"/>
+                            <rect x="220" y="129" width="50" height="7" rx="3" fill="#4f46e5" opacity="0.7"/>
+                            <rect x="210" y="150" width="170" height="60" rx="6" fill="#312e81" opacity="0.45"/>
+                            <circle cx="240" cy="175" r="14" fill="#3730a3" opacity="0.7"/>
+                            <text x="240" y="180" text-anchor="middle" font-size="14">💬</text>
+                            <rect x="262" y="163" width="108" height="8" rx="2" fill="#6366f1" opacity="0.5"/>
+                            <rect x="262" y="175" width="80" height="7" rx="2" fill="#6366f1" opacity="0.35"/>
+                            <rect x="262" y="187" width="95" height="7" rx="2" fill="#6366f1" opacity="0.35"/>
+                        </svg>
+                        <div class="project-card__overlay">
+                            <a href="#contacto" class="project-card__view-btn">Ver proyecto →</a>
+                        </div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-card__tag project-card__tag--indigo">Corporativo</span>
+                        <h3 class="project-card__title">Despacho Legal Fuentes</h3>
+                        <p class="project-card__desc">Sitio profesional con blog de artículos legales, chat en vivo y
+                            sistema de consultas privadas en línea.</p>
+                        <div class="project-card__tech">
+                            <span>WordPress</span><span>PHP</span><span>SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA al final de proyectos -->
+            <div class="projects__footer reveal">
+                <p class="projects__footer-text">¿Quieres un proyecto así para tu empresa?</p>
+                <a href="#contacto" class="btn-primary">Hablemos de tu proyecto →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY CHOOSE US ====== -->
+    <section class="why-us" id="porque">
+        <div class="container">
+            <div class="reveal">
+                <img src="tech-abstract.png" alt="Tecnología avanzada" class="why-us__image">
+            </div>
+            <div>
+                <div class="reveal">
+                    <div class="section-label">¿Por qué elegirnos?</div>
+                    <h2 class="section-title">Tecnología de <span class="gradient-text">vanguardia</span></h2>
+                    <p class="section-subtitle">
+                        Combinamos creatividad y tecnología avanzada para crear sitios web
+                        que no solo se ven increíbles, sino que generan resultados reales.
+                    </p>
+                </div>
+                <div class="why-us__features">
+                    <div class="feature-item reveal reveal-delay-1">
+                        <div class="feature-item__icon">🚀</div>
+                        <h3 class="feature-item__title">Ultra rápido</h3>
+                        <p class="feature-item__text">Carga en menos de 2 segundos</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-2">
+                        <div class="feature-item__icon">🎯</div>
+                        <h3 class="feature-item__title">Enfocado en resultados</h3>
+                        <p class="feature-item__text">Diseñado para convertir</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-3">
+                        <div class="feature-item__icon">🔐</div>
+                        <h3 class="feature-item__title">Seguridad total</h3>
+                        <p class="feature-item__text">Encriptación y protección</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-4">
+                        <div class="feature-item__icon">📱</div>
+                        <h3 class="feature-item__title">100% Responsive</h3>
+                        <p class="feature-item__text">Perfecto en todo dispositivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="process__header reveal">
+                <div class="section-label">Nuestro proceso</div>
+                <h2 class="section-title">De la idea al <span class="gradient-text">lanzamiento</span></h2>
+                <p class="section-subtitle">
+                    Un proceso transparente en 4 pasos que garantiza que tu proyecto
+                    se entregue a tiempo y supere tus expectativas.
+                </p>
+            </div>
+            <div class="process__timeline">
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-step__number">01</div>
+                    <h3 class="process-step__title">Descubrimiento</h3>
+                    <p class="process-step__text">Analizamos tus objetivos, tu audiencia y tu competencia para crear la
+                        estrategia perfecta.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-step__number">02</div>
+                    <h3 class="process-step__title">Diseño</h3>
+                    <p class="process-step__text">Creamos prototipos interactivos que puedes probar antes de desarrollar
+                        una sola línea de código.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-step__number">03</div>
+                    <h3 class="process-step__title">Desarrollo</h3>
+                    <p class="process-step__text">Construimos tu web con código limpio, optimizado y escalable usando
+                        las mejores tecnologías.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-4">
+                    <div class="process-step__number">04</div>
+                    <h3 class="process-step__title">Lanzamiento</h3>
+                    <p class="process-step__text">Desplegamos, monitoreamos y optimizamos tu web para garantizar un
+                        rendimiento excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PLANS ====== -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="pricing__header reveal">
+                <div class="section-label">Nuestros planes</div>
+                <h2 class="section-title">El plan perfecto para <span class="gradient-text">tu empresa</span></h2>
+                <p class="section-subtitle">
+                    Cada negocio es único. Elige el plan que mejor se adapte a tus necesidades
+                    y platiquemos sobre tu proyecto.
+                </p>
+            </div>
+            <div class="pricing__grid">
+                <!-- Starter -->
+                <div class="pricing-card reveal reveal-delay-1">
+                    <div class="pricing-card__tier">Starter</div>
+                    <h3 class="pricing-card__name">Emprendedor</h3>
+                    <p class="pricing-card__description">Ideal para pequeños negocios y emprendedores que dan sus
+                        primeros pasos online.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Hasta 5 páginas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño responsive
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SEO básico
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Certificado SSL
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Formulario de contacto
+                        </div>
+
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--outline" id="pricing-starter">
+                        Solicitar cotización
+                    </button>
+                </div>
+
+                <!-- Business (Featured) -->
+                <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+                    <div class="pricing-card__badge">⭐ Más popular</div>
+                    <div class="pricing-card__tier">Business</div>
+                    <h3 class="pricing-card__name">Empresarial</h3>
+                    <p class="pricing-card__description">Para empresas medianas que buscan una presencia digital
+                        profesional y efectiva.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Hasta 15 páginas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño UX/UI premium
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SEO avanzado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Panel administrador (CMS)
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Blog integrado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Chat en vivo
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Analítica avanzada
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Soporte prioritario 6 meses
+                        </div>
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--fill" id="pricing-business">
+                        Solicitar cotización →
+                    </button>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card reveal reveal-delay-3">
+                    <div class="pricing-card__tier">Enterprise</div>
+                    <h3 class="pricing-card__name">Corporativo</h3>
+                    <p class="pricing-card__description">Solución completa para grandes empresas que requieren
+                        funcionalidad a medida.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Páginas ilimitadas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño 100% personalizado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            E-commerce completo
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Integraciones API
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Multi-idioma
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Automatizaciones
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Soporte dedicado 12 meses
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SLA garantizado
+                        </div>
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--outline" id="pricing-enterprise">
+                        Solicitar cotización
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== CTA ====== -->
+    <section class="cta" id="contacto">
+        <div class="container">
+            <div class="cta__container reveal">
+                <h2 class="cta__title">
+                    ¿Listo para llevar tu negocio al <span class="gradient-text">siguiente nivel</span>?
+                </h2>
+                <p class="cta__subtitle">
+                    Agenda una consulta gratuita de 30 minutos. Sin compromisos.
+                    Te mostraremos cómo podemos transformar tu presencia digital.
+                </p>
+                <div class="cta__actions">
+                    <a href="https://wa.me/2288576186?text=Hola%2C%20me%20interesa%20una%20consulta%20sobre%20diseño%20web"
+                        class="btn-primary" id="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+                        💬 Contactar por WhatsApp
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#cba8a6aca6faf9fd8baca6aaa2a7e5a8a4a6" class="btn-secondary" id="cta-email">
+                        ✉️ Enviar email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <a href="#" class="navbar__logo">
+                        <div class="navbar__logo-icon">CP</div>
+                        CustomPoint<span class="logo-accent">MX</span>
+                    </a>
+                    <p class="footer__brand-description">
+                        Creamos experiencias digitales excepcionales para empresas que
+                        quieren destacar. Tecnología de vanguardia con diseño que enamora.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">ig</a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">X</a>
+                        <a href="#" class="footer__social-link" aria-label="GitHub">gh</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Servicios</h4>
+                    <a href="#servicios" class="footer__link">Diseño UI/UX</a>
+                    <a href="#servicios" class="footer__link">Desarrollo Web</a>
+                    <a href="#servicios" class="footer__link">E-Commerce</a>
+                    <a href="#servicios" class="footer__link">SEO & Analítica</a>
+                    <a href="#servicios" class="footer__link">Mantenimiento</a>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Empresa</h4>
+                    <a href="#porque" class="footer__link">Sobre nosotros</a>
+                    <a href="#proyectos" class="footer__link">Proyectos</a>
+                    <a href="#proceso" class="footer__link">Proceso</a>
+
+                    <a href="#contacto" class="footer__link">Contacto</a>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Contacto</h4>
+                    <a href="/cdn-cgi/l/email-protection#284b454f45191a1e684f45494144064b4745" class="footer__link"><span class="__cf_email__" data-cfemail="593a343e34686b6f193e34383035773a3634">[email&#160;protected]</span></a>
+                    <a href="tel:+521234567890" class="footer__link">+52 (228) 857-6186</a>
+                    <span class="footer__link">Ciudad de México, MX</span>
+                    <span class="footer__link">Lun - Vie: 9:00 - 18:00</span>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 CustomPointMX. Todos los derechos reservados.</p>
+       
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
