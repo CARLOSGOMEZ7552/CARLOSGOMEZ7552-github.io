@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+
+    <!-- SEO & Meta -->
+    <meta name="description"
+        content="CustomPointMX — Creamos páginas web profesionales para empresas pequeñas, medianas y grandes. Diseño moderno, rendimiento óptimo y resultados medibles.">
+    <meta name="keywords"
+        content="diseño web, páginas web empresariales, desarrollo web, sitios web profesionales, CustomPointMX">
+    <title>CustomPointMX — Páginas Web Profesionales para tu Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%233b82f6'/><stop offset='100%25' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='900' fill='white'>CP</text></svg>">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar__logo">
+                <div class="navbar__logo-icon">CP</div>
+                CustomPoint<span class="logo-accent">MX</span>
+            </a>
+            <div class="navbar__nav" id="navMenu">
+                <a href="#servicios" class="navbar__link">Servicios</a>
+                <a href="#proyectos" class="navbar__link">Proyectos</a>
+                <a href="#porque" class="navbar__link">¿Por qué?</a>
+                <a href="#proceso" class="navbar__link">Proceso</a>
+                <a href="#precios" class="navbar__link">Planes</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                    <span class="theme-toggle__slider"></span>
+                </button>
+                <a href="#contacto" class="navbar__cta">Contactar →</a>
+            </div>
+            <div class="navbar__right-mobile">
+                <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Cambiar tema">
+                    <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+                    <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+                    <span class="theme-toggle__slider"></span>
+                </button>
+                <button class="navbar__mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="inicio">
+        <img src="hero-bg.png" alt="" class="hero__bg-image" loading="eager">
+        <div class="hero__overlay"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    Nuevo: Lanzamientos web en 14 días
+                </div>
+                <h1 class="hero__title">
+                    <span class="line">Tu empresa</span>
+                    <span class="line">merece una web</span>
+                    <span class="line gradient-text">excepcional.</span>
+                </h1>
+                <p class="hero__description">
+                    Diseñamos y desarrollamos páginas web que impulsan tu negocio.
+                    Desde startups hasta corporaciones — creamos experiencias digitales
+                    que convierten visitantes en clientes.
+                </p>
+                <div class="hero__actions">
+                    <a href="#precios" class="btn-primary" id="hero-cta-primary">
+                        Ver planes
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#proyectos" class="btn-secondary" id="hero-cta-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor" />
+                        </svg>
+                        Ver proyectos
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <img src="web-mockup.png" alt="Mockup de diseño web profesional" class="hero__mockup">
+                <div class="hero__float-card hero__float-card--1">
+                    <div class="float-card__icon">⚡</div>
+                    <div class="float-card__title">Rendimiento</div>
+                    <div class="float-card__value">99/100 Score</div>
+                </div>
+                <div class="hero__float-card hero__float-card--2">
+                    <div class="float-card__icon">📈</div>
+                    <div class="float-card__title">Conversiones</div>
+                    <div class="float-card__value">+340% Growth</div>
+                </div>
+                <div class="hero__float-card hero__float-card--3">
+                    <div class="float-card__icon">🔒</div>
+                    <div class="float-card__title">Seguridad</div>
+                    <div class="float-card__value">SSL + WAF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services__header reveal">
+                <div class="section-label">Nuestros servicios</div>
+                <h2 class="section-title">Soluciones web para <span class="gradient-text">cada negocio</span></h2>
+                <p class="section-subtitle">
+                    No importa el tamaño de tu empresa, tenemos la solución perfecta para llevar
+                    tu presencia digital al siguiente nivel.
+                </p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card__icon service-card__icon--blue">🎨</div>
+                    <h3 class="service-card__title">Diseño UI/UX</h3>
+                    <p class="service-card__description">
+                        Interfaces modernas y experiencias de usuario intuitivas que cautivan
+                        a tus visitantes y los convierten en clientes leales.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Diseño responsive adaptable</span>
+                        <span class="service-card__feature">Prototipado interactivo</span>
+                        <span class="service-card__feature">Identidad visual coherente</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card__icon service-card__icon--purple">⚙️</div>
+                    <h3 class="service-card__title">Desarrollo Web</h3>
+                    <p class="service-card__description">
+                        Código limpio, rápido y seguro. Usamos las tecnologías más avanzadas para
+                        crear sitios web de alto rendimiento.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">React, Next.js, Vue</span>
+                        <span class="service-card__feature">Optimización SEO técnica</span>
+                        <span class="service-card__feature">Rendimiento optimizado</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-card__icon service-card__icon--cyan">🛒</div>
+                    <h3 class="service-card__title">E-Commerce</h3>
+                    <p class="service-card__description">
+                        Tiendas online profesionales que venden. Integración de pagos,
+                        inventario y logística en una sola plataforma.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Pasarelas de pago</span>
+                        <span class="service-card__feature">Gestión de inventario</span>
+                        <span class="service-card__feature">Carrito optimizado</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-card__icon service-card__icon--emerald">📊</div>
+                    <h3 class="service-card__title">Analítica & SEO</h3>
+                    <p class="service-card__description">
+                        Posiciona tu negocio en los primeros resultados de Google.
+                        Métricas claras y estrategias basadas en datos reales.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Google Analytics integrado</span>
+                        <span class="service-card__feature">SEO on-page y off-page</span>
+                        <span class="service-card__feature">Reportes mensuales</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-card__icon service-card__icon--indigo">🔧</div>
+                    <h3 class="service-card__title">Mantenimiento</h3>
+                    <p class="service-card__description">
+                        Tu web siempre actualizada y funcionando al 100%. Soporte técnico
+                        continuo y actualizaciones de seguridad.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Monitoreo 24/7</span>
+                        <span class="service-card__feature">Backups automáticos</span>
+                        <span class="service-card__feature">Actualizaciones de seguridad</span>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-card__icon service-card__icon--pink">📱</div>
+                    <h3 class="service-card__title">Apps Web</h3>
+                    <p class="service-card__description">
+                        Aplicaciones web progresivas (PWA) que funcionan como apps nativas
+                        sin necesidad de descargar nada.
+                    </p>
+                    <div class="service-card__features">
+                        <span class="service-card__feature">Funciona offline</span>
+                        <span class="service-card__feature">Notificaciones push</span>
+                        <span class="service-card__feature">Instalable en dispositivos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <div class="projects__header reveal">
+                <div class="section-label">Portafolio</div>
+                <h2 class="section-title">Proyectos <span class="gradient-text">realizados</span></h2>
+                <p class="section-subtitle">
+                    Cada proyecto es una historia de éxito. Conoce algunos de los sitios web
+                    que hemos creado para nuestros clientes.
+                </p>
+            </div>
+            <div class="projects__grid">
+                <!-- Aquí se agregarán los proyectos reales -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY CHOOSE US ====== -->
+    <section class="why-us" id="porque">
+        <div class="container">
+            <div class="reveal">
+                <img src="tech-abstract.png" alt="Tecnología avanzada" class="why-us__image">
+            </div>
+            <div>
+                <div class="reveal">
+                    <div class="section-label">¿Por qué elegirnos?</div>
+                    <h2 class="section-title">Tecnología de <span class="gradient-text">vanguardia</span></h2>
+                    <p class="section-subtitle">
+                        Combinamos creatividad y tecnología avanzada para crear sitios web
+                        que no solo se ven increíbles, sino que generan resultados reales.
+                    </p>
+                </div>
+                <div class="why-us__features">
+                    <div class="feature-item reveal reveal-delay-1">
+                        <div class="feature-item__icon">🚀</div>
+                        <h3 class="feature-item__title">Ultra rápido</h3>
+                        <p class="feature-item__text">Carga en menos de 2 segundos</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-2">
+                        <div class="feature-item__icon">🎯</div>
+                        <h3 class="feature-item__title">Enfocado en resultados</h3>
+                        <p class="feature-item__text">Diseñado para convertir</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-3">
+                        <div class="feature-item__icon">🔐</div>
+                        <h3 class="feature-item__title">Seguridad total</h3>
+                        <p class="feature-item__text">Encriptación y protección</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-4">
+                        <div class="feature-item__icon">📱</div>
+                        <h3 class="feature-item__title">100% Responsive</h3>
+                        <p class="feature-item__text">Perfecto en todo dispositivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PROCESS ====== -->
+    <section class="process" id="proceso">
+        <div class="container">
+            <div class="process__header reveal">
+                <div class="section-label">Nuestro proceso</div>
+                <h2 class="section-title">De la idea al <span class="gradient-text">lanzamiento</span></h2>
+                <p class="section-subtitle">
+                    Un proceso transparente en 4 pasos que garantiza que tu proyecto
+                    se entregue a tiempo y supere tus expectativas.
+                </p>
+            </div>
+            <div class="process__timeline">
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-step__number">01</div>
+                    <h3 class="process-step__title">Descubrimiento</h3>
+                    <p class="process-step__text">Analizamos tus objetivos, tu audiencia y tu competencia para crear la
+                        estrategia perfecta.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-step__number">02</div>
+                    <h3 class="process-step__title">Diseño</h3>
+                    <p class="process-step__text">Creamos prototipos interactivos que puedes probar antes de desarrollar
+                        una sola línea de código.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-step__number">03</div>
+                    <h3 class="process-step__title">Desarrollo</h3>
+                    <p class="process-step__text">Construimos tu web con código limpio, optimizado y escalable usando
+                        las mejores tecnologías.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-4">
+                    <div class="process-step__number">04</div>
+                    <h3 class="process-step__title">Lanzamiento</h3>
+                    <p class="process-step__text">Desplegamos, monitoreamos y optimizamos tu web para garantizar un
+                        rendimiento excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PLANS ====== -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="pricing__header reveal">
+                <div class="section-label">Nuestros planes</div>
+                <h2 class="section-title">El plan perfecto para <span class="gradient-text">tu empresa</span></h2>
+                <p class="section-subtitle">
+                    Cada negocio es único. Elige el plan que mejor se adapte a tus necesidades
+                    y platiquemos sobre tu proyecto.
+                </p>
+            </div>
+            <div class="pricing__grid">
+                <!-- Starter -->
+                <div class="pricing-card reveal reveal-delay-1">
+                    <div class="pricing-card__tier">Starter</div>
+                    <h3 class="pricing-card__name">Emprendedor</h3>
+                    <p class="pricing-card__description">Ideal para pequeños negocios y emprendedores que dan sus
+                        primeros pasos online.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Hasta 5 páginas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño responsive
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SEO básico
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Certificado SSL
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Formulario de contacto
+                        </div>
+
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--outline" id="pricing-starter">
+                        Solicitar cotización
+                    </button>
+                </div>
+
+                <!-- Business (Featured) -->
+                <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+                    <div class="pricing-card__badge">⭐ Más popular</div>
+                    <div class="pricing-card__tier">Business</div>
+                    <h3 class="pricing-card__name">Empresarial</h3>
+                    <p class="pricing-card__description">Para empresas medianas que buscan una presencia digital
+                        profesional y efectiva.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Hasta 15 páginas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño UX/UI premium
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SEO avanzado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Panel administrador (CMS)
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Blog integrado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Chat en vivo
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Analítica avanzada
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Soporte prioritario 6 meses
+                        </div>
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--fill" id="pricing-business">
+                        Solicitar cotización →
+                    </button>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card reveal reveal-delay-3">
+                    <div class="pricing-card__tier">Enterprise</div>
+                    <h3 class="pricing-card__name">Corporativo</h3>
+                    <p class="pricing-card__description">Solución completa para grandes empresas que requieren
+                        funcionalidad a medida.</p>
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Páginas ilimitadas
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Diseño 100% personalizado
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            E-commerce completo
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Integraciones API
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Multi-idioma
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Automatizaciones
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            Soporte dedicado 12 meses
+                        </div>
+                        <div class="pricing-card__feature">
+                            <span class="pricing-card__feature-icon">✓</span>
+                            SLA garantizado
+                        </div>
+                    </div>
+                    <button class="pricing-card__btn pricing-card__btn--outline" id="pricing-enterprise">
+                        Solicitar cotización
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== CTA ====== -->
+    <section class="cta" id="contacto">
+        <div class="container">
+            <div class="cta__container reveal">
+                <h2 class="cta__title">
+                    ¿Listo para llevar tu negocio al <span class="gradient-text">siguiente nivel</span>?
+                </h2>
+                <p class="cta__subtitle">
+                    Agenda una consulta gratuita de 30 minutos. Sin compromisos.
+                    Te mostraremos cómo podemos transformar tu presencia digital.
+                </p>
+                <div class="cta__actions">
+                    <a href="https://wa.me/2288576186?text=Hola%2C%20me%20interesa%20una%20consulta%20sobre%20diseño%20web"
+                        class="btn-primary" id="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+                        💬 Contactar por WhatsApp
+                    </a>
+                    <a href="mailto:cmgm126@gmail.com" class="btn-secondary" id="cta-email">
+                        ✉️ Enviar email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <a href="#" class="navbar__logo">
+                        <div class="navbar__logo-icon">CP</div>
+                        CustomPoint<span class="logo-accent">MX</span>
+                    </a>
+                    <p class="footer__brand-description">
+                        Creamos experiencias digitales excepcionales para empresas que
+                        quieren destacar. Tecnología de vanguardia con diseño que enamora.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">ig</a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">X</a>
+                        <a href="#" class="footer__social-link" aria-label="GitHub">gh</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Servicios</h4>
+                    <a href="#servicios" class="footer__link">Diseño UI/UX</a>
+                    <a href="#servicios" class="footer__link">Desarrollo Web</a>
+                    <a href="#servicios" class="footer__link">E-Commerce</a>
+                    <a href="#servicios" class="footer__link">SEO & Analítica</a>
+                    <a href="#servicios" class="footer__link">Mantenimiento</a>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Empresa</h4>
+                    <a href="#porque" class="footer__link">Sobre nosotros</a>
+                    <a href="#proyectos" class="footer__link">Proyectos</a>
+                    <a href="#proceso" class="footer__link">Proceso</a>
+
+                    <a href="#contacto" class="footer__link">Contacto</a>
+                </div>
+                <div>
+                    <h4 class="footer__column-title">Contacto</h4>
+                    <a href="mailto:cmgm126@gmail.com" class="footer__link">cmgm126@gmail.com</a>
+                    <a href="tel:+521234567890" class="footer__link">+52 (228) 857-6186</a>
+                    <span class="footer__link">Ciudad de México, MX</span>
+                    <span class="footer__link">Lun - Vie: 9:00 - 18:00</span>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 CustomPointMX. Todos los derechos reservados.</p>
+                <p>Diseñado con 💎 para empresas ambiciosas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
